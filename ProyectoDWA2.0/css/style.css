@@ -1108,7 +1108,8 @@ a img.aligncenter {
 	padding: 15px;
 	box-shadow: 0 0px 10px rgba(0,0,0,.1);
 	position: relative;
-	overflow: hidden;
+    overflow: hidden;
+    height: 100%;
 }
 .icon-box-hmv{
 	width: 100px;
@@ -3282,7 +3283,8 @@ span.m_1 {
 
 .our-team{
     text-align: center;
-	margin-bottom: 30px;
+    margin-bottom: 30px;
+    height: 100%;
 }
 .our-team .team-img{
     overflow: hidden;
@@ -3375,6 +3377,7 @@ span.m_1 {
 .blog-item {
     background: #f1f1f1;
     padding: 20px;
+    height: 100%;
 }
 .image-blog img{
 	padding: 0 !important;
