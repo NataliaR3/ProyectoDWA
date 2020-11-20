@@ -3809,11 +3809,19 @@ a.link-style3 {
 	color: #ffffff;
 }
 
-
 .course-item{
-	background: #ffffff;
+    background: #ffffff;
+	position: relative;
+    overflow: hidden;
+    height: 100%;
 }
-
+.course-desc{
+    padding: 15px;
+	position: relative;
+    overflow: hidden;
+    height: 15em ;
+    font: 1em sans-serif;
+}
 .course-title > h2 {
     margin: 15px 0;
     padding: 0px;
@@ -3826,33 +3834,13 @@ a.link-style3 {
     text-transform: capitalize;
 }
 .course-item:hover .course-title a {
-	color: #eea412;
+    color: #eea412;
 }
 .course-br{
 	border: 1px solid #4babb1;
-	padding: 15px;
+    padding: 15px; 
 }
-.course-meta-bot{
-	border: 1px solid #4babb1;
-	border-top: 0px;
-	padding: 15px;
-}
-.course-meta-bot ul{
-	padding: 0px;
-	margin: 0px;
-	display: block;
-	text-align: center;
-}
-.course-meta-bot ul li{
-	display: inline-block;
-	list-style: none;
-	padding: 0px 5px;
-	color: #212121;
-	font-size: 11px;
-}
-.course-meta-bot ul li:hover{
-	color: #eea412;
-}
+
 
 
 
