@@ -103,3 +103,40 @@ function locateMe() {
 
   navigator.geolocation.getCurrentPosition(success, error);
 }
+$(document).ready(function () {});
+var apiKey = "563492ad6f917000010000016dca24562a124f6f891e943140f7d14c";
+var image = "";
+function buscar() {
+  var search = $("#search").val();
+
+  cleanDiv();
+  imageSearch(search);
+}
+function cleanDiv() {
+  var div = document.getElementById("images");
+  div.innerHTML = "";
+}
+function imageSearch(search) {
+  $.ajax({
+    method: "GET",
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader("Authorization", apiKey);
+    },
+    url:
+      "https://api.pexels.com/v1/search?query=" +
+      search +
+      "&page=2&per_page=8",
+    success: function (data) {
+      console.log(data);
+      data.photos.forEach((photo) => {
+        image = `         
+        <img alt="picture" src="${photo.src.medium}" class="img-fluid" />
+        `;
+        $("#images").append(image);
+      });
+    },
+    error: function (error) {
+      console.log(error);
+    },
+  });
+}
