@@ -101,7 +101,5 @@ function locateMe() {
     output.innerHTML = "Unable to retrieve your location";
   }
 
-  output.innerHTML = "<p>Locating…</p>";
-
   navigator.geolocation.getCurrentPosition(success, error);
 }
